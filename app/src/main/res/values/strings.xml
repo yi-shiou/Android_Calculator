@@ -4,6 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="quit">Quit</string>
+    <string name="back">Back</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Thank for using this simple calculator which has only seven significant figures.If you want more function please wait for update.</string>
