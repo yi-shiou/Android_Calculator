@@ -136,14 +136,21 @@ public class MainActivity extends ActionBarActivity {
 
     private String count(){
         tmp = Float.parseFloat(newTV.getText().toString());
-        if(signTV.getText().toString().equals("+")) {
-            tmp += Float.parseFloat(oldTV.getText().toString());
-        }else if(signTV.getText().toString().equals("-")) {
-            tmp = Float.parseFloat(oldTV.getText().toString()) - tmp;
-        }else if(signTV.getText().toString().equals("*")) {
-            tmp =  Float.parseFloat(oldTV.getText().toString()) * tmp;
-        }else if(signTV.getText().toString().equals("/")) {
-            tmp =  Float.parseFloat(oldTV.getText().toString()) / tmp;
+        if(!signTV.getText().toString().equals("")) {
+            switch(signTV.getText().toString().toCharArray()[0]) {
+                case '+':
+                    tmp += Float.parseFloat(oldTV.getText().toString());
+                    break;
+                case '-':
+                    tmp = Float.parseFloat(oldTV.getText().toString()) - tmp;
+                    break;
+                case '*':
+                    tmp *=  Float.parseFloat(oldTV.getText().toString());
+                    break;
+                case '/':
+                    tmp =  Float.parseFloat(oldTV.getText().toString()) / tmp;
+                    break;
+            }
         }
         tmpS = String.valueOf(tmp);
         if (tmpS.indexOf(".0")==tmpS.length()-2){
